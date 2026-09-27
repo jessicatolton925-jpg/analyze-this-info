@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Analyze This Info | Business Analytics & Consulting</title>
+    <title>Analyze This Info | Business Analytics & Conversation Coaching</title>
 
     <meta
         name="description"
-        content="Analyze This Info provides business analytics consulting, data analysis, reporting, visualization, and data-informed insights for organizations."
+        content="Analyze This Info helps businesses turn data into meaningful insights and individuals navigate difficult conversations, dating, relationships, and social situations with greater clarity and confidence."
     >
 
     <style>
@@ -220,10 +220,10 @@
 
         .hero h1 {
             color: #142b45;
-            font-size: clamp(2.75rem, 4.4vw, 4.15rem);
+            font-size: clamp(3rem, 5.8vw, 5rem);
             line-height: 1.02;
             letter-spacing: -3px;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
 
         .hero h1 span {
@@ -233,7 +233,7 @@
         .hero-text {
             max-width: 650px;
             color: #53677c;
-            font-size: 1.05rem;
+            font-size: 1.13rem;
             line-height: 1.75;
             margin-bottom: 30px;
         }
@@ -1049,6 +1049,149 @@
 
 
         /* =========================================================
+           TWO-PATH SERVICES
+        ========================================================= */
+
+        .path-section {
+            background: #ffffff;
+        }
+
+        .path-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .path-card {
+            padding: 34px;
+            border: 1px solid #dfe7ee;
+            border-radius: 16px;
+            background: #ffffff;
+            box-shadow: 0 12px 30px rgba(20, 43, 69, 0.06);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .path-card::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 5px;
+            background: #278c91;
+        }
+
+        .path-card.coaching-path::before {
+            background: #6b7280;
+        }
+
+        .path-label {
+            display: inline-block;
+            color: #278c91;
+            font-size: 0.76rem;
+            font-weight: 850;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 13px;
+        }
+
+        .coaching-path .path-label {
+            color: #59636d;
+        }
+
+        .path-card h3 {
+            color: #173d6b;
+            font-size: 1.65rem;
+            line-height: 1.2;
+            margin-bottom: 12px;
+        }
+
+        .path-card p {
+            color: #647589;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .path-list {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+
+        .path-list li {
+            color: #586a7c;
+            font-size: 0.88rem;
+            padding: 6px 0;
+        }
+
+        .path-list li::before {
+            content: "✓";
+            color: #278c91;
+            font-weight: 900;
+            margin-right: 8px;
+        }
+
+        .coaching-path .path-list li::before {
+            color: #59636d;
+        }
+
+        /* =========================================================
+           CONVERSATION & CONFIDENCE COACHING
+        ========================================================= */
+
+        .coaching-section {
+            background: #f7fafc;
+        }
+
+        .coaching-intro {
+            max-width: 760px;
+            margin-bottom: 45px;
+        }
+
+        .coaching-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .coaching-card {
+            padding: 27px;
+            background: #ffffff;
+            border: 1px solid #e1e8ee;
+            border-radius: 13px;
+        }
+
+        .coaching-card h3 {
+            color: #173d6b;
+            font-size: 1.08rem;
+            margin-bottom: 8px;
+        }
+
+        .coaching-card p {
+            color: #68788a;
+            font-size: 0.89rem;
+        }
+
+        .coaching-note {
+            margin-top: 27px;
+            padding: 22px 25px;
+            color: #536577;
+            background: #eef4f7;
+            border: 1px solid #dce7ed;
+            border-radius: 11px;
+            font-size: 0.88rem;
+        }
+
+        .coaching-pricing {
+            margin-top: 48px;
+        }
+
+        .coaching-pricing h3 {
+            color: #173d6b;
+            margin-bottom: 20px;
+        }
+
+        /* =========================================================
            RESPONSIVE
         ========================================================= */
 
@@ -1068,9 +1211,14 @@
                 gap: 45px;
             }
 
+            .path-grid,
             .service-grid,
             .deliverable-grid,
             .pricing-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .coaching-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
 
@@ -1115,11 +1263,13 @@
                 width: 100%;
             }
 
+            .path-grid,
             .service-grid,
             .deliverable-grid,
             .process-grid,
             .pricing-grid,
-            .case-grid {
+            .case-grid,
+            .coaching-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -1168,13 +1318,14 @@
             </a>
 
             <nav>
-                <a href="#services">Services</a>
+                <a href="#paths">Services</a>
                 <a href="#how-it-works">How It Works</a>
-                <a href="#case-studies">Case Studies</a>
+                <a href="#case-studies">Portfolio</a>
+                <a href="#coaching">Coaching</a>
                 <a href="#about">About</a>
 
                 <a href="#contact" class="nav-button">
-                    Book a Consultation
+                    Explore Your Options
                 </a>
             </nav>
 
@@ -1198,19 +1349,19 @@
                 <div>
 
                     <span class="eyebrow">
-                        Business Analytics & Consulting
+                        Business Analytics & Conversation Coaching
                     </span>
 
                     <h1>
-                        Your data has a story.
-                        <span>Let's find it.</span>
+                        Your information has a story.
+                        <span>Let's make sense of it.</span>
                     </h1>
 
                     <p class="hero-text">
-                        We turn the data your business already has into clear, useful
-                        insights — uncovering trends, identifying opportunities,
-                        and helping you understand what's happening inside
-                        your organization.
+                        Whether you're trying to understand your business data or
+                        make sense of a difficult conversation, sometimes
+                        you just need someone to help you look at what's
+                        really happening.
                     </p>
 
                     <div class="hero-buttons">
@@ -1220,14 +1371,14 @@
                         </a>
 
                         <a href="#services" class="button button-secondary">
-                            Explore Services
+                            Business Analytics
                         </a>
 
                     </div>
 
                     <p class="hero-note">
-                        No full-time analyst required. Start with the
-                        data you already have.
+                        Business analytics remains at the heart of the brand — with a
+                        separate space for conversation and confidence coaching.
                     </p>
 
                 </div>
@@ -1285,6 +1436,71 @@
 
         </section>
 
+
+
+        <!-- =====================================================
+             TWO CLEAR PATHS
+        ====================================================== -->
+
+        <section class="path-section" id="paths">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="eyebrow">Two Ways We Can Help</span>
+                    <h2>One brand. Two clear services.</h2>
+                    <p>
+                        Analyze This Info helps businesses understand the
+                        information they already have and helps individuals
+                        work through conversations and situations that can
+                        be difficult to navigate alone.
+                    </p>
+                </div>
+
+                <div class="path-grid">
+
+                    <div class="path-card">
+                        <span class="path-label">For Businesses</span>
+                        <h3>Business Analytics</h3>
+                        <p>
+                            Turn existing business information into clear,
+                            meaningful insights, reports, dashboards, and
+                            questions worth investigating.
+                        </p>
+                        <ul class="path-list">
+                            <li>Healthcare data & reporting</li>
+                            <li>Employee turnover & retention</li>
+                            <li>Revenue, marketing & customer analysis</li>
+                            <li>Operations & process analysis</li>
+                            <li>Dashboards, visualizations & reports</li>
+                        </ul>
+                        <a href="#services" class="button button-primary">Explore Analytics</a>
+                    </div>
+
+                    <div class="path-card coaching-path">
+                        <span class="path-label">For Individuals</span>
+                        <h3>Conversation & Confidence Coaching</h3>
+                        <p>
+                            A judgment-free space to talk through dating,
+                            relationships, communication, social situations,
+                            confidence, and those conversations you don't
+                            know how to navigate.
+                        </p>
+                        <ul class="path-list">
+                            <li>Texting, dating & flirting questions</li>
+                            <li>Social confidence & conversation practice</li>
+                            <li>Difficult conversations & boundaries</li>
+                            <li>Relationship and communication questions</li>
+                            <li>Neurodivergent-friendly, without being exclusive</li>
+                        </ul>
+                        <a href="#coaching" class="button button-secondary">Explore Coaching</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
 
 
         <!-- =====================================================
@@ -1437,6 +1653,134 @@
 
         </section>
 
+
+
+        <!-- =====================================================
+             CONVERSATION & CONFIDENCE COACHING
+        ====================================================== -->
+
+        <section class="coaching-section" id="coaching">
+
+            <div class="container">
+
+                <div class="section-heading coaching-intro">
+                    <span class="eyebrow">Conversation & Confidence Coaching</span>
+                    <h2>Sometimes you just need someone to talk it through with.</h2>
+                    <p>
+                        Bring the conversation you're stuck on, the situation
+                        you're overthinking, or the social question you wish
+                        someone would explain without making you feel awkward.
+                        We'll slow it down, look at the context, and talk
+                        through your options together.
+                    </p>
+                </div>
+
+                <div class="coaching-grid">
+
+                    <div class="coaching-card">
+                        <h3>Dating & Flirting</h3>
+                        <p>
+                            Talk through how to show interest, what to say,
+                            how to approach a situation, or how to navigate
+                            mixed signals.
+                        </p>
+                    </div>
+
+                    <div class="coaching-card">
+                        <h3>Texting & Communication</h3>
+                        <p>
+                            Bring the message you're stuck on and work through
+                            possible responses and communication approaches.
+                        </p>
+                    </div>
+
+                    <div class="coaching-card">
+                        <h3>Social Confidence</h3>
+                        <p>
+                            Practice conversations, prepare for uncomfortable
+                            situations, and build confidence communicating with others.
+                        </p>
+                    </div>
+
+                    <div class="coaching-card">
+                        <h3>Difficult Conversations</h3>
+                        <p>
+                            Think through how to express yourself clearly while
+                            protecting your boundaries and relationships.
+                        </p>
+                    </div>
+
+                    <div class="coaching-card">
+                        <h3>Relationship Questions</h3>
+                        <p>
+                            Get a neutral, practical sounding board when you need
+                            another perspective on a relationship or interaction.
+                        </p>
+                    </div>
+
+                    <div class="coaching-card">
+                        <h3>Neurodivergent-Friendly</h3>
+                        <p>
+                            Communication doesn't come naturally to everyone.
+                            Conversations can be approached without judgment
+                            or assumptions.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="coaching-note">
+                    <strong>This is coaching and conversation support — not therapy, diagnosis, or mental-health treatment.</strong>
+                    The focus is practical: communication, dating, relationships, social situations, confidence, and helping you think through what you want to do next.
+                </div>
+
+                <div class="coaching-pricing">
+                    <h3>Simple, approachable sessions</h3>
+
+                    <div class="pricing-grid">
+
+                        <div class="price-card">
+                            <h3>Free Discovery Call</h3>
+                            <div class="price">$0</div>
+                            <p>A 15-minute introductory conversation to see whether this type of support feels like a good fit.</p>
+                            <ul>
+                                <li>15-minute conversation</li>
+                                <li>Discuss what you're navigating</li>
+                                <li>No-pressure introduction</li>
+                            </ul>
+                            <a href="#contact" class="button button-secondary">Start Here</a>
+                        </div>
+
+                        <div class="price-card">
+                            <h3>Focused Conversation</h3>
+                            <div class="price">$59</div>
+                            <p>A 30-minute session focused on one specific situation, conversation, relationship, or communication question.</p>
+                            <ul>
+                                <li>30-minute session</li>
+                                <li>Talk through the situation</li>
+                                <li>Explore practical options</li>
+                            </ul>
+                            <a href="#contact" class="button button-primary">Book Session</a>
+                        </div>
+
+                        <div class="price-card featured">
+                            <h3>Deep-Dive Session</h3>
+                            <div class="price">$99</div>
+                            <p>A 60-minute session for more complicated situations, multiple questions, or deeper discussion.</p>
+                            <ul>
+                                <li>60-minute session</li>
+                                <li>More time to unpack the situation</li>
+                                <li>Conversation and next-step planning</li>
+                            </ul>
+                            <a href="#contact" class="button button-primary">Book Session</a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
 
 
         <!-- =====================================================
@@ -2391,8 +2735,7 @@
                         letter-spacing:-1.5px;
                         margin-bottom:20px;
                     ">
-                        Analytics should make
-                        business decisions clearer.
+                        Clarity is useful in business — and in conversation.
                     </h2>
 
                     <p>
@@ -2404,8 +2747,9 @@
 
                     <p>
                         My approach combines analytical thinking with
-                        real-world business experience. <strong>Data is only
-                        useful when people can understand it and use it.</strong>
+                        real-world business experience and a people-centered
+                        communication style. <strong>Information is only useful
+                        when people can understand it and use it.</strong>
                     </p>
 
                     <p>
@@ -2416,10 +2760,12 @@
                     </p>
 
                     <p>
-                        The goal is simple: take complicated information,
-                        find the meaningful story inside it, and present
-                        the findings in a way that supports better questions
-                        and better-informed decisions.
+                        The goal is simple: take something complicated, slow it
+                        down, find the meaningful story inside it, and make it
+                        easier to understand. For businesses, that can mean
+                        data, reporting, and analysis. For individuals, it can
+                        mean a conversation, relationship, or social situation
+                        that needs another perspective.
                     </p>
 
                 </div>
@@ -2439,18 +2785,23 @@
             <div class="container cta-content">
 
                 <h2>
-                    Have data?
-                    Have a question?
+                    What are you trying to figure out?
                 </h2>
 
                 <p>
-                    Let's talk about what you're trying to understand
-                    and whether data analysis can help.
+                    Whether it's a business question, a dataset, a difficult
+                    conversation, or something you've been overthinking,
+                    let's start there.
                 </p>
 
-                <a href="#" class="button button-primary">
-                    Book Your Free 15-Minute Discovery Call
-                </a>
+                <div class="hero-buttons" style="justify-content:center;">
+                    <a href="#contact" class="button button-primary">
+                        Business Analytics
+                    </a>
+                    <a href="#coaching" class="button button-primary">
+                        Conversation Coaching
+                    </a>
+                </div>
 
             </div>
 
@@ -2478,8 +2829,8 @@
                     </h3>
 
                     <p>
-                        Business analytics and consulting focused on
-                        turning business data into understandable insights.
+                        Business analytics and conversation coaching focused
+                        on turning complicated information into clarity.
                     </p>
 
                 </div>
@@ -2487,7 +2838,7 @@
 
                 <div class="footer-links">
 
-                    <a href="#services">
+                    <a href="#paths">
                         Services
                     </a>
 
@@ -2496,7 +2847,7 @@
                     </a>
 
                     <a href="#case-studies">
-                        Case Studies
+                        Portfolio
                     </a>
 
                     <a href="#about">
